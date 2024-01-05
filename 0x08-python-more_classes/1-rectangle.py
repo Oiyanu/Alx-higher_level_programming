@@ -6,10 +6,10 @@ class Rectangle:
     """Represent a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initiate a new Rectangle.
+        """Initialize a new Rectangle.
 
         Args:
-            width (int): The width of the new recctangle
+            width (int): The width of the new rectangle
             height (int): The height of the new rectangle
         """
         self.width = width
