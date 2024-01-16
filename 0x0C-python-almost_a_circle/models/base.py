@@ -1,30 +1,37 @@
 #!/usr/bin/python3
-"""Module for the Base class"""
+
+"""Defines a base model class."""
 import json
 import csv
 import turtle
 
 
 class Base:
-    """A representation of the base class"""
-    __nd_objects = 0
+    """Base model.
+
+    This Represents the "base" for all other classes in project 0x0C*.
+
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
+    """
+
+    __nb_objects = 0
 
     def __init__(self, id=None):
-        """
-        initializes an instance of base class
+        """Initialize a new Base.
 
         Args:
-            id: identity of instance of base class
+            id (int): The identity of the new Base.
         """
         if id is not None:
             self.id = id
         else:
-            Base.__nd_objects += 1
-            self.id = Base.__nd_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
-        @staticmethod
+    @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns a JSON representation
+        """Return the JSON serialization of a list of dicts.
 
         Args:
             list_dictionaries (list): A list of dictionaries.
@@ -35,10 +42,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Save the JSON representation of an object to a file.
+        """Write the JSON serialization of a list of objects to a file.
 
         Args:
-            list_objs (list): A list of objects.
+            list_objs (list): A list of inherited Base instances.
         """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
@@ -50,7 +57,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Deserializes the JSON string @jason_string
+        """Return the deserialization of a JSON string.
 
         Args:
             json_string (str): A JSON str representation of a list of dicts.
