@@ -7,7 +7,7 @@ import sys
 from models.base import Base
 
 
-class TestSquareClass(unittest.TestCase):
+class TestSquare_instantiation(unittest.TestCase):
     """ Test for Square class """
 
     def test_is_base(self):

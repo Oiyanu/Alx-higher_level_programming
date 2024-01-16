@@ -7,7 +7,7 @@ from models.square import Square
 import unittest
 
 
-class TestBaseClass(unittest.TestCase):
+class TestBase_instantiation(unittest.TestCase):
     """ Test cases for Base class"""
 
     def test_no_arg(self):

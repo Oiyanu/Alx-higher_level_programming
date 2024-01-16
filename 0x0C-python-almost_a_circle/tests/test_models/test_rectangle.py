@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
-class TestRectangleClass(unittest.TestCase):
+class TestRectangle_instantiation(unittest.TestCase):
     """ Test cases for rectangle class """
 
     def test_rectangle_is_base(self):
