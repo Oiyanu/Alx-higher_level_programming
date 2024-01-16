@@ -21,11 +21,10 @@ class Rectangle(Base):
         super().__init__(id)
 
     def__str__(self):
-        """Returns the print() and str() representation of the Rectangle"""
-        str_rep = "[{}] ({}) {}/{} - {}/{}"
-        idd, xx, yy, w = self.id, self.__x, self.__y, self.__width
-        h = self.__height
-        return str_rep.format(__class__.__name__, idd, xx, yy, w, h)
+        """Return the print() and str() representation of the Rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
 
     @property
     def width(self):
