@@ -117,5 +117,5 @@ class Rectangle(Base):
         for attr in self.__dict__:
             key = attr.lstrip('_').split('_')[-1]
             value = getattr(self, attr)
-            data[key} = value
+            data[key] = value
         return data
