@@ -1,4 +1,4 @@
-#!/usrr/bin/node
+#!/usr/bin/node
 
 exports.esrever = function (list) {
   const arr = [];
