@@ -2,7 +2,7 @@
 """contains the class definition of a state and an instance Base"""
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalhemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
